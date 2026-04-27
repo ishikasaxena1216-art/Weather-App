@@ -23,12 +23,13 @@ body{
     width: 100% ;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 10px;
     
 }
 
 .search input{
-    border: 0;
+    /* border: 0;
     outline: 0;
     background: #ebfffc;
     color: #555;
@@ -37,7 +38,18 @@ body{
     border-radius: 30px;
     flex: 1;
     margin-right: 16px;
-    font-size: 18px;
+    font-size: 18px; */
+
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 15px;   /* changed */
+    height: 50px;         /* changed */
+    border-radius: 30px;
+    flex: 1;
+    font-size: 16px;      /* changed */
+
 }
 .search button{
     border:1px solid rgba(92, 87, 87, 0.15);
@@ -110,4 +122,42 @@ body{
     font-size: 14px;
     margin-top: 10px;
     display: none;
+}
+@media (max-width: 600px) {
+
+    .card{
+        padding: 25px 20px;
+        margin-top: 50px;
+    }
+
+    .weather h1{
+        font-size: 50px;
+    }
+
+    .weather h2{
+        font-size: 30px;
+    }
+
+    .details{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .col{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .humidity, .wind{
+        font-size: 20px;
+    }
+
+    .search input{
+        height: 45px;
+    }
+
+    .search button{
+        width: 45px;
+        height: 45px;
+    }
 }
